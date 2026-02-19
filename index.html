@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAGMA | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F5F5F7;      
+            --dark: #404258;    
+            --accent: #47B5FF;  
+            --slate: #6B728E;   
+        }
+
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--dark);
+            overflow-x: hidden; 
+        }
+
+       
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(0.5deg); }
+        }
+        .infinity-float { animation: float 6s ease-in-out infinite; }
+        .delay-1 { animation-delay: 1.5s; }
+        .delay-2 { animation-delay: 3s; }
+
+ 
+        nav {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+            border-bottom: 1px solid rgba(0,0,0,0.02);
+        }
+        
+        .nav-link:hover { color: var(--accent); }
+
+    
+        .btn-pill {
+            background-color: var(--dark);
+            color: white;
+            padding: 16px 40px;
+            border-radius: 100px;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-pill:hover {
+            background-color: var(--accent);
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(71, 181, 255, 0.3);
+        }
+
+        .tech-tag {
+            background: white;
+            color: var(--slate);
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            margin: 5px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+
+        .hero-img-container {
+            width: 100%;
+            max-width: 600px;
+            aspect-ratio: 1/1;
+            border-radius: 5rem;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-card {
+            background: white;
+            padding: 48px; 
+            border-radius: 3rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+            min-width: 220px;
+        }
+        .social-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-10px) scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="fixed w-full z-50 py-5 bg-[#F5F5F7]/90 backdrop-blur-xl">
+        <div class="max-w-7xl mx-auto px-8 flex justify-between items-center">
+            <a href="#" class="text-4xl font-extrabold tracking-tighter text-[#404258]">PRAGMA<span class="text-[#47B5FF]">.</span></a>
+            <div class="hidden md:flex space-x-12 text-[14px] font-bold tracking-[0.2em] text-[#6B728E]">
+                <a href="#hero" class="nav-link">HOME</a>
+                <a href="#skills" class="nav-link">SKILLS</a>
+                <a href="#projects" class="nav-link">PROJECTS</a>
+                <a href="#freelance" class="nav-link">HIRE</a>
+                <a href="#social" class="nav-link">CONNECT</a>
+            </div>
+            <a href="https://wa.me/+201018738961" class="btn-pill !py-3 !px-8 text-xs">WORK WITH ME</a>
+        </div>
+    </nav>
+
+    <section id="hero" class="min-h-screen flex items-center px-8 pt-24 infinity-float">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+            <div data-aos="fade-up">
+                <span class="text-[#47B5FF] font-black tracking-widest text-[10px] uppercase mb-4 block"> </span>
+                <h1 class="text-7xl md:text-9xl font-extrabold mb-8 tracking-tighter leading-[0.9]">
+                    Pure<br><span class="text-[#47B5FF]">Logic.</span>
+                </h1>
+                <p class="text-xl text-[#6B728E] mb-12 font-medium max-w-md">
+                    Software engineer building high-performance systems with a focus on simplicity and stability.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#projects" class="btn-pill">My Projects</a>
+                    <button class="font-bold text-[#404258] hover:text-[#47B5FF] transition">My Process →</button>
+                </div>
+            </div>
+            <div class="flex justify-center" data-aos="zoom-in">
+                <div class="hero-img-container w-[400px] h-[400px]">
+                    <img src="./Images/hero.jpeg" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-32 px-8 bg-white infinity-float delay-1">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="p-16 rounded-[4rem] bg-[#F5F5F7] border border-black/5" data-aos="fade-right">
+                    <h3 class="text-3xl font-bold mb-10">Frontend</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag">HTML</span><span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JAVA SCRIPT</span><span class="tech-tag">TAILWIND</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">UI/UX LOGIC</span>
+                    </div>
+                </div>
+                <div class="p-16 rounded-[4rem] bg-[#404258] text-white" data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-10 text-[#47B5FF]">BACKEND</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">SQL SERVER</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">ENTITY FRMAE WORK</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">C#</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">ASP.NET</span>
+                    </div>
+                </div>
+                 <div class="p-16 rounded-[4rem] bg-[#404258] text-white" data-aos="fade-left">
+                    <h3 class="text-3xl font-bold mb-10 text-[#47B5FF]">OTHER</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">AGILE PROJECTS MANAGMENT / SCRUM</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">GIT/GITHUB</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">C++ PROGRAMMING</span>
+                        <span class="tech-tag !bg-white/10 !text-white !border-none">GEN AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-32 px-8 max-w-7xl mx-auto infinity-float delay-2">
+        <h2 class="text-4xl font-bold text-[#222831] mb-16 text-center">MY <span class="text-[#00ADB5]">PROJECTS</span></h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="glass rounded-3xl overflow-hidden group bg-[#404258]" data-aos="fade-up">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="./Images/home.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-[#EEEEEE] mb-2">  MEDI CARE</h3>
+                    <p class="text-[#EEEEEE] opacity-50 text-sm mb-6">HEALTHCARE WEBSITE</p>
+                    <a href="#" class="text-[#00ADB5] font-bold text-xs tracking-widest uppercase">Explore Case →</a>
+                </div>
+            </div>
+            <div class="glass rounded-3xl overflow-hidden group bg-[#404258]" data-aos="fade-up" data-aos-delay="100">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="./Images/1.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-[#EEEEEE] mb-2">IronForge</h3>
+                    <p class="text-[#EEEEEE] opacity-50 text-sm mb-6">ONLINE GYM</p>
+                    <a href="#" class="text-[#00ADB5] font-bold text-xs tracking-widest uppercase">Explore Case →</a>
+                </div>
+            </div>
+            <div class="glass rounded-3xl overflow-hidden group bg-[#404258]" data-aos="fade-up" data-aos-delay="200">
+                <div class="h-64 overflow-hidden relative">
+                    <img src="./Images/Screenshot 2025-11-29 125746.png" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                </div>
+                <div class="p-8">
+                    <h3 class="text-xl font-bold text-[#EEEEEE] mb-2">FCAI</h3>
+                    <p class="text-[#EEEEEE] opacity-50 text-sm mb-6">THE WEBSITE OF FCAI</p>
+                    <a href="#" class="text-[#00ADB5] font-bold text-xs tracking-widest uppercase">Explore Case →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="freelance" class="py-32 px-8">
+        <div class="max-w-7xl mx-auto bg-white rounded-[5rem] p-20 text-center border border-black/5 infinity-float">
+            <h2 class="text-4xl font-extrabold mb-12">Start a <span class="text-[#47B5FF]">Project</span></h2>
+            <div class="flex flex-wrap justify-center gap-10">
+                <a href="https://www.upwork.com/freelancers/~01247e8c5590387acb" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">UPWORK ↗</a>
+                <a href="https://mostaql.com/u/ahmed_saad296" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">MOSTAQL ↗</a>
+                <a href="#" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">Freelancer ↗</a>
+                <a href="https://kafiil.com/u/ahmed_saad69" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">KAFIL ↗</a>
+                <a href="https://www.truelancer.com/freelancer/ahmedsaad514" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">TRUELANCER ↗</a>
+                <a href="https://khamsat.com/user/ahmed_saad296" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">KHAMSAT ↗</a>
+                <a href="https://nafezly.com/u/ahmed_saa" class="text-xl font-bold text-[#404258] hover:text-[#47B5FF] transition">NAFEZLY ↗</a>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="py-32 px-8 max-w-7xl mx-auto infinity-float delay-1">
+        <div class="flex flex-wrap justify-center gap-10">
+             <h2 class="text-4xl font-bold text-[#222831] mb-16 text-center">CONNECT<span class="text-[#00ADB5]">IONS</span></h2>
+          <a href="https://www.linkedin.com/in/aboalsood/" target="_blank" class="social-card flex flex-col items-center shadow-xl group">
+    <i class="fa-brands fa-linkedin-in text-6xl mb-6 text-[#0077B5] transition-all duration-300 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(0,119,181,0.3)]"></i>
+    <span class="font-bold tracking-widest text-[12px] text-[#404258]">LINKEDIN</span>
+                      </a>
+
+        <a href="https://github.com/AboAls3od" target="_blank" class="social-card flex flex-col items-center shadow-xl group">
+    <i class="fa-brands fa-github text-6xl mb-6 text-[#333] transition-all duration-300 group-hover:scale-125 group-hover:drop-shadow-[0_0_15px_rgba(0,0,0,0.1)]"></i>
+    <span class="font-bold tracking-widest text-[12px] text-[#404258]">GITHUB</span>
+         </a>
+            <a href="https://wa.me/+201018738961" target="_blank" class="social-card flex flex-col items-center shadow-xl group">
+                <i class="fa-brands fa-whatsapp text-6xl mb-6 text-[#25D366] transition-transform group-hover:scale-125"></i>
+                <span class="font-bold tracking-widest text-[12px] text-[#404258]">WHATSAPP</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center text-[10px] font-bold tracking-[0.5em] opacity-30">
+        PRAGMA 
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1200, once: true });
+    </script>
+</body>
+</html>
